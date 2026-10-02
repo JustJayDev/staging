@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>JustJayDev</title><meta name="description" content="Foundation check — tokens, type scale and theme layers."><link rel="canonical" href="https://justjaydev.github.io/"><!--
+      Theme bootstrap is inline and blocking on purpose: it must set
+      data-theme before the first paint, or the page flashes the wrong
+      theme. `is:inline` opts out of bundling so it lands here verbatim.
+    --><script>/**
+ * Theme bootstrap.
+ *
+ * Runs synchronously in <head>, before first paint, and sets a single
+ * attribute on <html>. Doing it here rather than in a deferred module is the
+ * whole point: a late script means the page paints once in the default theme
+ * and then snaps — a visible flash. This is inline and blocking by design, and
+ * it is roughly 300 bytes.
+ *
+ * Precedence: explicit user choice (localStorage) > OS preference >
+ * dark (the site default). An invalid or missing stored value falls through
+ * to the OS preference rather than throwing.
+ */
+(() => {
+  const KEY = 'jj-theme';
+  const root = document.documentElement;
+  let theme: string;
+
+  try {
+    const stored = localStorage.getItem(KEY);
+    theme = stored === 'dark' || stored === 'light' ? stored : '';
+  } catch {
+    // Private browsing or blocked storage — fall back to the OS preference.
+    theme = '';
+  }
+
+  if (!theme) {
+    theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+
+  root.dataset.theme = theme;
+  // Drives the <meta name="color-scheme"> the UA uses for form controls and
+  // scrollbars, so those match the page instead of flashing the other way.
+  root.style.colorScheme = theme;
+})();</script><!--
+      Only Space Grotesk is preloaded. It renders the hero, so it is the LCP
+      element. Preloading Inter or JetBrains Mono would spend bandwidth on
+      text that paints below the fold.
+    --><link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="stylesheet" href="/_astro/index.D35fyVAN.css"></head><body><a class="skip-link" href="#main">Skip to content</a><main id="main"><section class="shell" style="padding-block: var(--s-8)" data-astro-cid-lcdefpme><p class="font-mono text-mono uppercase tracking-widest text-accent" data-astro-cid-lcdefpme>Phase 1 — Foundation</p><h1 class="mt-4 font-display text-display font-bold leading-[0.95] tracking-[-0.03em]" style="color: var(--text)" data-astro-cid-lcdefpme>Tokens load.<span class="accent" data-astro-cid-lcdefpme>Both themes</span>resolve.</h1><p class="lede mt-6 max-w-prose text-dim" data-astro-cid-lcdefpme>This page proves the design system is wired: fluid type, the spacing scale, self-hosted fonts and the theme token layers. No content yet — that comes in Phase&nbsp;2.</p><!--
+      Every swatch reads its colour from a real token, so this doubles as a
+      visual regression check: if a token is renamed or dropped, this grid goes
+      visibly wrong rather than failing silently.
+    --><div class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" role="list" aria-label="Colour token samples" data-astro-cid-lcdefpme><div role="listitem" class="rounded-md border border-line p-4" data-astro-cid-lcdefpme><div class="h-14 w-full rounded-sm bg" data-astro-cid-lcdefpme></div><p class="mt-3 font-mono text-mono text-mute" data-astro-cid-lcdefpme>--bg</p></div><div role="listitem" class="rounded-md border border-line p-4" data-astro-cid-lcdefpme><div class="h-14 w-full rounded-sm bg-raise" data-astro-cid-lcdefpme></div><p class="mt-3 font-mono text-mono text-mute" data-astro-cid-lcdefpme>--raise</p></div><div role="listitem" class="rounded-md border border-line p-4" data-astro-cid-lcdefpme><div class="h-14 w-full rounded-sm bg-sunken" data-astro-cid-lcdefpme></div><p class="mt-3 font-mono text-mono text-mute" data-astro-cid-lcdefpme>--sunken</p></div><div role="listitem" class="rounded-md border border-line p-4" data-astro-cid-lcdefpme><div class="h-14 w-full rounded-sm bg-accent" data-astro-cid-lcdefpme></div><p class="mt-3 font-mono text-mono text-mute" data-astro-cid-lcdefpme>--accent</p></div></div><div class="mt-8 flex flex-wrap gap-3" data-astro-cid-lcdefpme><span class="btn btn--primary" data-astro-cid-lcdefpme>Primary</span><span class="btn btn--ghost" data-astro-cid-lcdefpme>Ghost</span><span class="mono-xs mute" data-astro-cid-lcdefpme>mono-xs · text-mono</span></div></section></main></body></html>
