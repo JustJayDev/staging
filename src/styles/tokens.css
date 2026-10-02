@@ -1,0 +1,161 @@
+/* ============================================================
+   DESIGN TOKENS — the single source of truth.
+
+   Layer 1 (below) is the runtime token layer: plain custom
+   properties on :root, overridden per [data-theme]. This is
+   verbatim from v7 and is what makes theme switching work with
+   zero JavaScript beyond setting one attribute.
+
+   Layer 2 (@theme inline) maps those runtime tokens onto Tailwind
+   utilities. `inline` matters: it makes Tailwind reference the
+   var() directly rather than copying the value at build time, so a
+   utility like bg-bg still follows a theme switch at runtime.
+   ============================================================ */
+
+/* ---- type ---- */
+:root {
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --t-display: clamp(2.5rem, 1.2rem + 6.2vw, 5.5rem);
+  --t-h1: clamp(1.9rem, 1.3rem + 2.6vw, 3.1rem);
+  --t-h2: clamp(1.35rem, 1.1rem + 1.2vw, 1.9rem);
+  --t-h3: clamp(1.05rem, 0.95rem + 0.5vw, 1.3rem);
+  --t-body: clamp(0.95rem, 0.9rem + 0.25vw, 1.06rem);
+  --t-mono: 0.8rem;
+
+  /* ---- space ---- */
+  --s-1: 4px;  --s-2: 8px;   --s-3: 12px; --s-4: 16px;
+  --s-5: 24px; --s-6: 32px;  --s-7: 48px; --s-8: 72px;
+
+  /* ---- radius ---- */
+  --r-sm: 8px; --r-md: 14px; --r-pill: 999px;
+
+  /* ---- motion ---- */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0.05, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* --ease-glide is for entrances that travel further than a state change.
+   * Slightly more front-loaded than --ease-out, so a rise reads as
+   * deliberate rather than as a slide. It is a token so the entire entrance
+   * system can be retuned from one place instead of per component. */
+  --ease-glide: cubic-bezier(0.16, 0.84, 0.28, 1);
+  --d-micro: 140ms;
+  --d-state: 240ms;
+  --d-enter: 400ms;
+  --d-ambient: 24s;
+}
+
+/* ============================================================
+   DARK — default. Deep slate-teal, restrained single accent.
+   ============================================================ */
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #070b10;
+  --bg-raise: #0c1219;
+  --bg-sunken: #05080c;
+  --line: rgba(148, 178, 199, 0.10);
+  --line-2: rgba(148, 178, 199, 0.18);
+  --text: #e6edf3;
+  --text-dim: #8fa3b0;
+  --text-mute: #7e919c;
+
+  --accent: #34d399;
+  --accent-soft: rgba(52, 211, 153, 0.12);
+  --accent-line: rgba(52, 211, 153, 0.30);
+  --live: #f87171;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.40);
+  --shadow-2: 0 4px 16px -4px rgba(0, 0, 0, 0.55);
+  /* One step further out on the same ramp. Reserved for hover elevation. */
+  --shadow-3: 0 18px 40px -20px rgba(0, 0, 0, 0.65);
+  --field-opacity: 0.30;
+}
+
+/* ============================================================
+   LIGHT — a peer, not an afterthought. Same token contract.
+   ============================================================ */
+[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #f7f9fa;
+  --bg-raise: #ffffff;
+  --bg-sunken: #eef2f4;
+  --line: rgba(11, 18, 24, 0.10);
+  --line-2: rgba(11, 18, 24, 0.20);
+  --text: #0b1218;
+  --text-dim: #4a5b67;
+  --text-mute: #5c6d79;
+
+  /* Measured: --accent on --bg-sunken was 4.37 (fails AA 4.5) and on its own
+   * --accent-soft chip was 4.41. Both are nudged one step darker, the minimum
+   * that clears AA on every surface; all other tokens were already 4.5+. */
+  --accent: #0d6f4d;
+  --accent-soft: rgba(15, 122, 86, 0.10);
+  --accent-line: rgba(15, 122, 86, 0.28);
+  --live: #c2410c;
+
+  --shadow-1: 0 1px 2px rgba(11, 18, 24, 0.06);
+  --shadow-2: 0 4px 16px -4px rgba(11, 18, 24, 0.12);
+  --shadow-3: 0 18px 40px -20px rgba(11, 18, 24, 0.20);
+  --field-opacity: 0.16;
+}
+
+/* ============================================================
+   TAILWIND BRIDGE
+   Every runtime token above, exposed as a utility-generating token.
+   Because this block uses `inline`, Tailwind emits var(--token)
+   rather than a frozen literal — so utilities track theme switches.
+   ============================================================ */
+@theme inline {
+  /* colour */
+  --color-bg: var(--bg);
+  --color-raise: var(--bg-raise);
+  --color-sunken: var(--bg-sunken);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-ink: var(--text);
+  --color-dim: var(--text-dim);
+  --color-mute: var(--text-mute);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-line: var(--accent-line);
+  --color-live: var(--live);
+
+  /* type */
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+  --text-display: var(--t-display);
+  --text-h1: var(--t-h1);
+  --text-h2: var(--t-h2);
+  --text-h3: var(--t-h3);
+  --text-mono: var(--t-mono);
+
+  /* spacing */
+  --spacing-1: var(--s-1);
+  --spacing-2: var(--s-2);
+  --spacing-3: var(--s-3);
+  --spacing-4: var(--s-4);
+  --spacing-5: var(--s-5);
+  --spacing-6: var(--s-6);
+  --spacing-7: var(--s-7);
+  --spacing-8: var(--s-8);
+
+  /* radius */
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-pill: var(--r-pill);
+
+  /* elevation */
+  --shadow-1: var(--shadow-1);
+  --shadow-2: var(--shadow-2);
+  --shadow-3: var(--shadow-3);
+
+  /* motion */
+  --ease-out: var(--ease-out);
+  --ease-in-out: var(--ease-in-out);
+  --ease-spring: var(--ease-spring);
+  --ease-glide: var(--ease-glide);
+}

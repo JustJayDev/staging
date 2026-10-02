@@ -1,0 +1,16 @@
+{
+  "id": "fruit-ninja",
+  "name": "Fruit Ninja",
+  "status": "Casual classic",
+  "badges": [
+    "Swipe"
+  ],
+  "details": [
+    "Swipe the fruit, dodge the bombs."
+  ],
+  "nowPlaying": false,
+  "verified": false,
+  "hasProfile": false,
+  "accent": "#8fa3b0",
+  "category": "casual"
+}

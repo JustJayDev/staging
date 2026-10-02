@@ -1,0 +1,16 @@
+{
+  "id": "jetpack-joyride",
+  "name": "Jetpack Joyride",
+  "status": "Casual classic",
+  "badges": [
+    "Endless runner"
+  ],
+  "details": [
+    "Jetpack-fuel collecting endless run."
+  ],
+  "nowPlaying": false,
+  "verified": false,
+  "hasProfile": false,
+  "accent": "#8fa3b0",
+  "category": "casual"
+}

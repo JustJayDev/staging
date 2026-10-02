@@ -1,0 +1,20 @@
+{
+  "id": "pixvault",
+  "name": "PixVault",
+  "tagline": "Wallpaper library",
+  "detail": "A clean, fast wallpaper gallery — browse, preview and grab high-quality walls for your phone. Free, no watermark, no signup.",
+  "url": "https://justjaydev.github.io/pixvault/",
+  "repo": "https://github.com/JustJayDev/pixvault",
+  "status": "live",
+  "stack": [
+    "React",
+    "Vite",
+    "Tailwind"
+  ],
+  "highlights": [
+    "Original-resolution HD & 4K walls, no watermark and no signup wall",
+    "Category and resolution filters, plus a lightbox for full-screen preview",
+    "Admin dashboard for uploading and health-checking wallpapers",
+    "Deploy pipeline hardened with automated recovery of orphaned uploads"
+  ]
+}

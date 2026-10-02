@@ -1,0 +1,27 @@
+{
+  "id": "clash-royale",
+  "name": "Clash Royale",
+  "status": "Ladder grinder",
+  "badges": [
+    "6,840 Trophies",
+    "Ultimate Champion",
+    "Fast Cycle"
+  ],
+  "details": [
+    "Best rank: Ultimate Champion in Path of Legends.",
+    "Peak trophies: 6,840 (Grand Champion arena range).",
+    "Style: fast cycle decks — cheap wins, constant pressure."
+  ],
+  "nowPlaying": false,
+  "verified": true,
+  "lastUpdated": "2026-09-18",
+  "hasProfile": false,
+  "accent": "#ff4dd2",
+  "category": "main",
+  "image": {
+    "src": "/games/clashroyale.webp",
+    "width": 1294,
+    "height": 728,
+    "bytes": 57736
+  }
+}

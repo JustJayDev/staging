@@ -1,0 +1,25 @@
+{
+  "id": "minecraft",
+  "name": "Minecraft",
+  "status": "Since 2019",
+  "badges": [
+    "Ender Dragon ×4",
+    "Mods & Add-ons"
+  ],
+  "details": [
+    "Completed the game (Ender Dragon) 4 times.",
+    "Playing since 2019.",
+    "Loves add-ons and mods — that’s why worlds get restarted instead of always finished."
+  ],
+  "nowPlaying": false,
+  "verified": true,
+  "hasProfile": false,
+  "accent": "#4dff7d",
+  "category": "main",
+  "image": {
+    "src": "/games/minecraft.webp",
+    "width": 1294,
+    "height": 728,
+    "bytes": 52108
+  }
+}

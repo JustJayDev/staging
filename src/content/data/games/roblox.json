@@ -1,0 +1,48 @@
+{
+  "id": "roblox",
+  "name": "Roblox",
+  "status": "Grinder",
+  "badges": [
+    "30M Bounty",
+    "V4 Max",
+    "Titanic Pets"
+  ],
+  "details": [
+    "Pet Simulator 99: owned many Titanic and Huge pets (top-tier).",
+    "Blox Fruits: ALL permanent fruits except mythical, Dark Blade unlocked, race V4 max, max level.",
+    "30M bounty in BOTH Marines and Pirates."
+  ],
+  "nowPlaying": true,
+  "verified": true,
+  "hasProfile": true,
+  "profileRows": [
+    {
+      "label": "Bounty",
+      "value": "30M (Marines + Pirates)"
+    },
+    {
+      "label": "Race",
+      "value": "V4 Max"
+    },
+    {
+      "label": "Fruits",
+      "value": "All permanent (excl. mythical)"
+    },
+    {
+      "label": "Dark Blade",
+      "value": "Unlocked"
+    },
+    {
+      "label": "Pets",
+      "value": "Titanic & Huge"
+    }
+  ],
+  "accent": "#9d4dff",
+  "category": "main",
+  "image": {
+    "src": "/games/roblox.webp",
+    "width": 1294,
+    "height": 728,
+    "bytes": 50548
+  }
+}

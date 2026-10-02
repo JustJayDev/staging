@@ -1,0 +1,58 @@
+---
+/**
+ * Base layout — the document shell every page renders into.
+ *
+ * Phase 1 scope: correct document structure, theme bootstrap, font preload,
+ * and nothing else. Header and footer arrive in Phase 3; this is deliberately
+ * a plain <main> so the build stays verifiable at every step.
+ */
+import '../styles/base.css';
+import themeScript from '../scripts/theme.ts?raw';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <!--
+      Theme bootstrap is inline and blocking on purpose: it must set
+      data-theme before the first paint, or the page flashes the wrong
+      theme. `is:inline` opts out of bundling so it lands here verbatim.
+    -->
+    <script is:inline set:html={themeScript} />
+
+    <!--
+      Only Space Grotesk is preloaded. It renders the hero, so it is the LCP
+      element. Preloading Inter or JetBrains Mono would spend bandwidth on
+      text that paints below the fold.
+    -->
+    <link
+      rel="preload"
+      href="/fonts/space-grotesk-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <main id="main">
+      <slot />
+    </main>
+  </body>
+</html>

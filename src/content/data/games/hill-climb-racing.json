@@ -1,0 +1,16 @@
+{
+  "id": "hill-climb-racing",
+  "name": "Hill Climb Racing",
+  "status": "Casual classic",
+  "badges": [
+    "Physics toy"
+  ],
+  "details": [
+    "Physics-driven hill climbs. Good for passing time."
+  ],
+  "nowPlaying": false,
+  "verified": false,
+  "hasProfile": false,
+  "accent": "#8fa3b0",
+  "category": "casual"
+}

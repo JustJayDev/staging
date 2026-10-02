@@ -1,0 +1,16 @@
+{
+  "id": "chess",
+  "name": "Chess",
+  "status": "Casual classic",
+  "badges": [
+    "Strategy"
+  ],
+  "details": [
+    "Occasional casual games. Still counts."
+  ],
+  "nowPlaying": false,
+  "verified": false,
+  "hasProfile": false,
+  "accent": "#8fa3b0",
+  "category": "casual"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "fc-mobile",
+  "name": "FC Mobile",
+  "status": "Main game · Football",
+  "badges": [
+    "10★ Manager Mode",
+    "5★ H2H",
+    "7★ VSA",
+    "126 OVR"
+  ],
+  "details": [
+    "Division Rivals peaks: 10 Star Manager Mode · 5 Star H2H · 7 Star VSA.",
+    "Best squad OVR: 126.",
+    "Favourite card: TOTS Dembélé (Trickster) — best one."
+  ],
+  "nowPlaying": true,
+  "verified": true,
+  "lastUpdated": "2026-09-07",
+  "hasProfile": true,
+  "profileRows": [
+    {
+      "label": "Manager Mode",
+      "value": "10★"
+    },
+    {
+      "label": "H2H",
+      "value": "5★"
+    },
+    {
+      "label": "VSA",
+      "value": "7★"
+    },
+    {
+      "label": "Best OVR",
+      "value": "126"
+    },
+    {
+      "label": "Fav Card",
+      "value": "TOTS Dembélé"
+    }
+  ],
+  "accent": "#4de1ff",
+  "category": "main",
+  "image": {
+    "src": "/games/fcmobile.webp",
+    "width": 1294,
+    "height": 728,
+    "bytes": 167672
+  }
+}

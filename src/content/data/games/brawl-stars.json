@@ -1,0 +1,27 @@
+{
+  "id": "brawl-stars",
+  "name": "Brawl Stars",
+  "status": "Casual ranked",
+  "badges": [
+    "17,250 Trophies",
+    "Masters I",
+    "Edgar · Crow · Spike"
+  ],
+  "details": [
+    "Total trophies: 17,250 across all brawlers.",
+    "Ranked: Masters I in Ranked Mode.",
+    "Mains: Edgar, Crow, Spike — all at high power levels."
+  ],
+  "nowPlaying": false,
+  "verified": true,
+  "lastUpdated": "2026-09-18",
+  "hasProfile": false,
+  "accent": "#ffd24d",
+  "category": "main",
+  "image": {
+    "src": "/games/brawlstars.webp",
+    "width": 1294,
+    "height": 728,
+    "bytes": 50360
+  }
+}

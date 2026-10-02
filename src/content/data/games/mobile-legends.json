@@ -1,0 +1,23 @@
+{
+  "id": "mobile-legends",
+  "name": "Mobile Legends",
+  "status": "Casual veteran",
+  "badges": [
+    "Mythic tier"
+  ],
+  "details": [
+    "Reached above Legendary — Mythic tier.",
+    "Played casually; the game got boring after a while."
+  ],
+  "nowPlaying": false,
+  "verified": true,
+  "hasProfile": false,
+  "accent": "#4d7dff",
+  "category": "main",
+  "image": {
+    "src": "/games/mlbb.webp",
+    "width": 1294,
+    "height": 728,
+    "bytes": 121716
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "temple-run",
+  "name": "Temple Run",
+  "status": "Casual classic",
+  "badges": [
+    "Endless runner"
+  ],
+  "details": [
+    "Classic endless runner with the cursed idol."
+  ],
+  "nowPlaying": false,
+  "verified": false,
+  "hasProfile": false,
+  "accent": "#8fa3b0",
+  "category": "casual"
+}

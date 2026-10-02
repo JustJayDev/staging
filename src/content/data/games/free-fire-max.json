@@ -1,0 +1,54 @@
+{
+  "id": "free-fire-max",
+  "name": "Free Fire Max",
+  "status": "Main game · Rusher",
+  "badges": [
+    "Grandmaster BR",
+    "Grandmaster CS",
+    "Rusher"
+  ],
+  "details": [
+    "Highest rank: Grandmaster in both BR Ranked and CS Ranked.",
+    "Role: Rusher — aggressive entry, first one in.",
+    "Season-by-season ranks coming soon."
+  ],
+  "nowPlaying": true,
+  "flex": "Defeated many YouTubers in ranked matches.",
+  "verified": true,
+  "lastUpdated": "2026-09-07",
+  "hasProfile": true,
+  "profileRows": [
+    {
+      "label": "IGN",
+      "value": "JustJayDev"
+    },
+    {
+      "label": "Server",
+      "value": "India"
+    },
+    {
+      "label": "BR Rank",
+      "value": "Grandmaster"
+    },
+    {
+      "label": "CS Rank",
+      "value": "Grandmaster"
+    },
+    {
+      "label": "Role",
+      "value": "Rusher"
+    },
+    {
+      "label": "Device",
+      "value": "realme 9 Pro 5G · 480 DPI"
+    }
+  ],
+  "accent": "#ff4d4d",
+  "category": "main",
+  "image": {
+    "src": "/games/freefire.webp",
+    "width": 1294,
+    "height": 728,
+    "bytes": 73272
+  }
+}

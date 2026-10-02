@@ -1,0 +1,16 @@
+{
+  "id": "angry-birds",
+  "name": "Angry Birds",
+  "status": "Casual classic",
+  "badges": [
+    "Physics puzzle"
+  ],
+  "details": [
+    "Pull back, let fly, knock things over."
+  ],
+  "nowPlaying": false,
+  "verified": false,
+  "hasProfile": false,
+  "accent": "#8fa3b0",
+  "category": "casual"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "8-ball-pool",
+  "name": "8 Ball Pool",
+  "status": "Casual classic",
+  "badges": [
+    "Pool"
+  ],
+  "details": [
+    "Flick the cue, sink the eight."
+  ],
+  "nowPlaying": false,
+  "verified": false,
+  "hasProfile": false,
+  "accent": "#8fa3b0",
+  "category": "casual"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "candy-crush",
+  "name": "Candy Crush",
+  "status": "Casual classic",
+  "badges": [
+    "Match-3"
+  ],
+  "details": [
+    "The match-3 that started it all."
+  ],
+  "nowPlaying": false,
+  "verified": false,
+  "hasProfile": false,
+  "accent": "#8fa3b0",
+  "category": "casual"
+}

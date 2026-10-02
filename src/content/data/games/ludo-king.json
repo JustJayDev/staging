@@ -1,0 +1,16 @@
+{
+  "id": "ludo-king",
+  "name": "Ludo King",
+  "status": "Casual classic",
+  "badges": [
+    "Board game"
+  ],
+  "details": [
+    "Classic Ludo. Everyone has played it."
+  ],
+  "nowPlaying": false,
+  "verified": false,
+  "hasProfile": false,
+  "accent": "#8fa3b0",
+  "category": "casual"
+}

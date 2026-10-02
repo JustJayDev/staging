@@ -1,0 +1,82 @@
+{
+  "name": "Jay Kumar",
+  "handle": "JustJayDev",
+  "tagline": "The definition of victory.",
+  "bio": "I don’t compete with others. I compete with yesterday’s me — and I always win.",
+  "bioLong": "I build apps, websites and games with AI, I grind Free Fire Max as a rusher, and I’m learning paper trading. Pure mobile player — everything I make, I make on my phone.",
+  "location": "India",
+  "heroImage": "/jay-hero.jpg",
+  "motto": "A King Never Wavers",
+  "mottoCode": "Code. Build. Improve. Repeat.",
+  "mottoWords": ["Focus", "Discipline", "Freedom"],
+  "interests": [
+    "AI Builder",
+    "Mobile Gamer",
+    "Future Trader",
+    "Anime & Donghua",
+    "Manhua & Manhwa",
+    "Football",
+    "Content Creator",
+    "Free Fire Rusher"
+  ],
+  "footballers": [
+    "Cristiano Ronaldo",
+    "Son Heung-min",
+    "Maldini",
+    "Cafu",
+    "Dybala",
+    "Ronaldinho",
+    "Neymar",
+    "Kylian Mbappé"
+  ],
+  "footballClubs": ["Real Madrid", "AC Milan", "Manchester United"],
+  "setup": {
+    "phone": "realme 9 Pro 5G (RMX3471)",
+    "chipset": "Snapdragon 695 5G · Adreno 619",
+    "cpu": "8-core SM6375",
+    "display": "6.6\" FHD+ 1080×2412 · 120Hz · HDR10+",
+    "tuning": "480 DPI → 320 DPI tuned for max control",
+    "ram": "6 GB",
+    "storage": "106 GB · 65 GB free",
+    "os": "Android 14 · Patch 2025-02-01",
+    "extra": "Tuned for smooth high-FPS Free Fire Max"
+  },
+  "socials": [
+    {
+      "label": "GitHub",
+      "handle": "@JustJayDev",
+      "url": "https://github.com/JustJayDev",
+      "icon": "github"
+    },
+    {
+      "label": "YouTube",
+      "handle": "@neonnovaxplays",
+      "url": "https://youtube.com/@neonnovaxplays",
+      "icon": "youtube"
+    },
+    {
+      "label": "Instagram",
+      "handle": "@jaykumar152010",
+      "url": "https://www.instagram.com/jaykumar152010",
+      "icon": "instagram"
+    },
+    {
+      "label": "Threads",
+      "handle": "@jaykumar20100",
+      "url": "https://www.threads.com/@jaykumar20100",
+      "icon": "threads"
+    },
+    {
+      "label": "Discord",
+      "handle": "discord.gg/D2j4SxW8",
+      "url": "https://discord.gg/D2j4SxW8",
+      "icon": "discord"
+    },
+    {
+      "label": "Reddit",
+      "handle": "u/Melodic-Control8287",
+      "url": "https://www.reddit.com/u/Melodic-Control8287",
+      "icon": "reddit"
+    }
+  ]
+}

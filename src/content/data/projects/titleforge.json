@@ -1,0 +1,20 @@
+{
+  "id": "titleforge",
+  "name": "TitleForge",
+  "tagline": "AI bulk YouTube title renamer",
+  "detail": "Connect your channel → AI analyses every video → forges click-worthy titles → apply in one click. Open source, bring-your-own-AI.",
+  "url": "https://justjaydev.github.io/TitleForge/",
+  "repo": "https://github.com/JustJayDev/TitleForge",
+  "status": "live",
+  "stack": [
+    "Vanilla JS",
+    "YouTube Data API v3",
+    "Developer Vault"
+  ],
+  "highlights": [
+    "AI key never shipped in the repo or the browser bundle — held server-side by the Developer Vault",
+    "Four-step flow: connect → load videos → forge → review & apply",
+    "Batch forge with concurrency control, CSV export, and undo for applied changes",
+    "Google OAuth with a 1-hour in-memory token, never written to localStorage"
+  ]
+}

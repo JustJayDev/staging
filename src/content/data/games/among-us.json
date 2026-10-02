@@ -1,0 +1,23 @@
+{
+  "id": "among-us",
+  "name": "Among Us",
+  "status": "For fun",
+  "badges": [
+    "Certified Impostor"
+  ],
+  "details": [
+    "Played for fun with friends.",
+    "Certified Impostor."
+  ],
+  "nowPlaying": false,
+  "verified": true,
+  "hasProfile": false,
+  "accent": "#ff4d4d",
+  "category": "main",
+  "image": {
+    "src": "/games/amongus.webp",
+    "width": 947,
+    "height": 592,
+    "bytes": 23248
+  }
+}

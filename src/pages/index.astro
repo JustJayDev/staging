@@ -1,0 +1,101 @@
+---
+/**
+ * Phase 1 smoke page.
+ *
+ * This is a build-verification surface, not the real home page — the hero and
+ * sections land in Phase 4. It exists so the foundation (tokens, fonts, theme,
+ * layout, zero-JS budget) can be checked in isolation before real content is
+ * layered on top.
+ */
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="JustJayDev"
+  description="Foundation check — tokens, type scale and theme layers."
+>
+  <section class="shell" style="padding-block: var(--s-8)">
+    <p class="font-mono text-mono uppercase tracking-widest text-accent">
+      Phase 1 — Foundation
+    </p>
+
+    <h1
+      class="mt-4 font-display text-display font-bold leading-[0.95] tracking-[-0.03em]"
+      style="color: var(--text)"
+    >
+      Tokens load.
+      <span class="accent">Both themes</span>
+      resolve.
+    </h1>
+
+    <p class="lede mt-6 max-w-prose text-dim">
+      This page proves the design system is wired: fluid type, the spacing scale,
+      self-hosted fonts and the theme token layers. No content yet — that comes
+      in Phase&nbsp;2.
+    </p>
+
+    <!--
+      Every swatch reads its colour from a real token, so this doubles as a
+      visual regression check: if a token is renamed or dropped, this grid goes
+      visibly wrong rather than failing silently.
+    -->
+    <div
+      class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"
+      role="list"
+      aria-label="Colour token samples"
+    >
+      {[
+        ['bg', 'bg'],
+        ['raise', 'bg-raise'],
+        ['sunken', 'bg-sunken'],
+        ['accent', 'bg-accent'],
+      ].map(([name, cls]) => (
+        <div role="listitem" class="rounded-md border border-line p-4">
+          <div class:list={['h-14 w-full rounded-sm', cls]}></div>
+          <p class="mt-3 font-mono text-mono text-mute">--{name}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <span class="btn btn--primary">Primary</span>
+      <span class="btn btn--ghost">Ghost</span>
+      <span class="mono-xs mute">mono-xs · text-mono</span>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* Component classes live with the components that use them, not in a global
+     sheet — this is the one exception for the two button shapes the smoke page
+     exercises, so Phase 3 has a known-good reference to port from. */
+  .lede {
+    font-size: clamp(1.05rem, 1rem + 0.5vw, 1.25rem);
+    line-height: 1.55;
+  }
+  .accent { color: var(--accent); }
+  .mute { color: var(--text-mute); }
+  .mono-xs {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 var(--s-5);
+    border-radius: var(--r-pill);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+  }
+  .btn--primary {
+    background: var(--accent);
+    color: var(--bg);
+  }
+  .btn--ghost {
+    border-color: var(--line-2);
+    color: var(--text);
+  }
+</style>

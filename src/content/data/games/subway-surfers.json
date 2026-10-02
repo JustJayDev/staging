@@ -1,0 +1,16 @@
+{
+  "id": "subway-surfers",
+  "name": "Subway Surfers",
+  "status": "Casual classic",
+  "badges": [
+    "Endless runner"
+  ],
+  "details": [
+    "One of the originals. Endless runs, no thinking required."
+  ],
+  "nowPlaying": false,
+  "verified": false,
+  "hasProfile": false,
+  "accent": "#8fa3b0",
+  "category": "casual"
+}
